@@ -1,0 +1,6 @@
+SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+include $(SELF_DIR)/.project-basics/Makefile.mk
+include $(SELF_DIR)/.project-basics/.env
+
+# DC=docker-compose -pled-$(PROJECT_NAME) -f .project-basics/docker/docker-compose.yml
+DC=docker-compose -pled-$(PROJECT_NAME) -f docker-compose.yml
